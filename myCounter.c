@@ -77,7 +77,7 @@ void* consume(void* argument) {
 			pthread_cond_wait(&myCond2, &myMutex);
 		}
 
-		printf("CONSUMER: %d -> %d\n", myCount-1, myCount); fflush(stdout);
+		printf("CONSUMER: myCount: %d -> %d\n", myCount-1, myCount); fflush(stdout);
 		canPrint = 0;
 
 		pthread_cond_signal(&myCond1);
